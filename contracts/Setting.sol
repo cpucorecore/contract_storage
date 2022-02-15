@@ -16,10 +16,6 @@ contract Setting is ExternalStorable, ISetting {
         return ISettingStorage(getStorage());
     }
 
-    function getLiquidationFeeRate(bytes32 asset) external view returns (uint256) {
-        return Storage().getUint(LIQUIDATION_FEE_RATE, asset);
-    }
-
     function getTradingFeeRate(bytes32 asset) external view returns (uint256) {
         return Storage().getUint(TRADING_FEE_RATE, asset);
     }
